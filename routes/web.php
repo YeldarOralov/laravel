@@ -14,4 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/book/{book}', 'HomeController@book');
+
+Route::get('/book/{book}', 'HomeController@editPage');
+Route::post('/book/edit/{book}', 'HomeController@edit');
+
+Route::get('/create', 'HomeController@createPage');
+Route::post('/book/create', 'HomeController@create');
+
+Route::post('/book/delete/{book}', 'HomeController@delete');
